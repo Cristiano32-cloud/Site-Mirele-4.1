@@ -1,0 +1,336 @@
+*{
+    margin:0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto , sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Inicio Header */
+.nav{
+    background-color: rgb(11, 4, 8);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 28px;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+.nav-list a:hover{
+    color: rgb(85, 170, 239);
+}
+/* Fim Header*/
+
+/* Inicio Man */
+.main{
+    width: 100%;
+    background-color: black;
+    background-image:url(images/receita-de-brigadeiro-caseiro.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    image-resolution: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    padding-bottom: 20%;
+}
+
+.main h1{
+    color: rgb(93, 148, 225);
+    font-size: 54px;
+}
+
+.main p {
+    font-size: 24px;
+    font-style: italic;
+    color: rgb(93, 148, 225);
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+
+}
+
+.call-to-action{
+    cursor: pointer;
+    background-color: palevioletred;
+    border: 0;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.9s;
+
+}
+.call-to-action1{
+    cursor: pointer;
+    background-color: #34af23;
+    border: 0;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.9s;
+}
+.call-to-action3{
+    background-color: #32429d;
+    cursor: pointer;
+    border: 0;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.9s;
+}
+.call-to-action2{
+    background-color: rgb(199, 66, 148);
+    cursor: pointer;
+    border: 0;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.9s;
+}
+
+.call-to-action:hover{
+    transform: scale(1.1);
+}
+.call-to-action1:hover{
+    transform: scale(1.1);
+}
+.call-to-action2:hover{
+    transform: scale(1.1);
+}
+.call-to-action3:hover{
+    transform: scale(1.1);
+}
+
+.main a{
+    text-decoration: none;
+    color: black;
+}
+/* Fim Man */
+
+/* Inicio Sobre */
+.about{
+ background-color: rgba(60, 86, 216, 0.967);
+ width: 100%;
+ padding-left: 10%;
+ padding-right: 10%;
+ padding-top: 80px;
+ padding-bottom: 80px;
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.about div{
+    max-width: 50%;
+    padding-right: 20px;
+
+}
+
+.about img{
+    max-width: 420px;
+    border-radius: 8px;
+    border-radius: 8px;
+}
+
+.about div h2{
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+.about p{
+    font-size: 25px;
+}
+/* Fim Sobre */
+
+/* Inicio Doces */
+#Doces{
+    background-color: rgb(199, 66, 148);
+    text-align: center;
+    padding: 80px 0;
+    width: 100%;
+    flex-direction: column;
+}
+#Doces h2{
+    margin-bottom: 52px;
+    font-size: 50px;
+}
+
+
+#doces1 img{
+     margin-left: 28px;
+     display: inline;
+     margin-right: 8px;
+}
+#box{
+	width: 150px;
+	display: inline-block;
+}
+.produto{
+    background-color: rgb(199, 66, 148);
+    display: flex;
+    border-top: none;
+    padding-top: 0;
+}
+
+.produto span h3 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: rgb(0, 23, 156);
+    
+
+}
+
+.prod{
+   flex: 1; /*distribui as 3 divs dentro do conteiner com larguras iguais*/
+   margin: 10px; /*coloca uma margem entre elas*/
+   text-align: center;
+}
+
+.prod img{
+   max-width: 80%;
+   transition: 0.9s;
+   -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.prod img:hover{
+    opacity: 1;
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+
+}
+
+/* Fim Doces */
+
+/* Inicio Rodapé */
+footer{
+    width: 100%;
+    background-color: black;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: palevioletred;
+}
+footer a{
+    text-decoration: none;
+    color: palevioletred;
+}
+
+footer p{
+    margin-left: 22px;
+}
+/* Fim Rodapé */
+
+/* Responsividade */
+@media (max-width: 1050px) {
+
+    /* Inicio man */
+    .main h1{
+        font-size: 45px;
+    }
+    .main p{
+        font-size: 10px;
+    }
+    .main{
+        background-size: cover;
+
+         /* Fim man */
+    }
+}
+
+@media screen and (max-width: 1050px){
+     /* Inicio sobre */
+     
+     .about{
+        flex-direction: column;
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+     }
+
+     .about div{
+        max-width: 70%;
+     }
+
+     .about div h2{
+        font-size: 45px;
+     }
+
+     .about img{
+        width: 80%;
+        margin-top: 30px;
+     }
+    }
+      /* Fim sobre */
+
+      /* Inico doces*/
+      @media screen and (max-width: 720px) {
+    
+        .produto span h3 {
+                
+        font-size: 10px;
+            
+        }
+        .about div p {
+            font-size: 15px;
+        }
+
+ 
+        }
+
+        @media screen and (max-width: 440px) {
+            .about div p {
+                font-size: 10px;
+            }
+        }
+
+     
+
+      /* Inicio Rodapé */
+
+    footer{
+        flex-direction: column;
+    }
+    footer h3{
+        font-size: 44px;
+        margin-bottom: 8px;
+    }
+    footer p{
+        margin: 0;
+    }
+    /* Fim Rodapé */

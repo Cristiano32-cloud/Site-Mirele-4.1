@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet">
+    <script async src="script.js"></script>
+
+    <title>Salada de frutas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, button, input {
+            font: 400 15px "Roboto", sans-serif;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(246, 185, 246);
+            }
+
+        h1{
+            color: rgb(50, 8, 128);
+            font-size: 54px;
+            }
+
+        h1{
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            }
+        
+        hr{
+            width: 100%;
+        }
+             
+        main{
+            padding: 40px 0 64px;
+        }
+
+        section{
+             max-width: 600px;
+             padding: 0 16px;
+             margin: 0 auto;
+             margin-top: 80px;
+        }
+        h2{
+            font-family: "Raleway" sans-serif;
+            font-size: 32px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .pud{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 30%;
+        }
+
+        .movie{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product{
+            font-size: 20px;
+            margin-bottom: 26px;
+        }
+        .image{
+            width: 240px;
+            border-radius: 50px;
+            
+        }
+        .price{
+            margin-top: 8px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .product-price{
+            margin-right: 12px;
+            font-family: "Raleway" , sans-serif;
+            font-weight: bold;
+        }
+
+        .button-hover{
+            background-color: rgba(212, 13, 13, 0.725);
+            color: white;
+            border: 2px solid rgba(212, 13, 13, 0.725);
+            border-radius: 6px;
+            padding: 4px 2px;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        .button-hover:hover{
+            background-color: transparent;
+            color: rgba(212, 13, 13, 0.725);
+        }
+        button{
+            cursor: pointer;
+        }
+        .cart-table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-head{
+            text-align: start;
+            border-bottom: 1px solid rgb(109, 84, 19);
+            padding-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .seconde-col,
+        .third-col{
+            width: 26%;
+        }
+        .cart-production td{
+            padding: 8px 0;
+        }
+        .identification{
+            display: flex;
+            align-items: center;
+        }
+        .cart-image{
+            width: 120px;
+            height: 70px;
+        }
+
+        .cart-title{
+            margin-left: 16px;
+            font-size: 18px;
+        }
+        .cart-price{
+            font-family: sans-serif;
+        }
+        .product-input{
+            width: 48px;
+            height: 34px;
+            border-radius: 6px;
+            border: 2px solid rgb(67, 134, 211);
+            background-color: rgb(240, 233, 223);
+        }
+        .remove{
+            margin-left: 12px;
+            background-color: rgba(212, 13, 13, 0.725);
+            color: white;
+            padding: 10px 8px;
+            border: 0;
+            border-radius: 6px;
+
+            transition: 0.3;
+        }
+        .remove:hover {
+            filter: brightness(0.9);
+        }
+        .cart-total{
+            border-top: 1px solid rgb(153, 125, 205);
+            text-align: end;
+            padding: 6px 16px 0 0 ;
+            font-size: 18px;
+        }
+        .cart-total strong {
+            margin-right: 39px;
+        }
+        .purchase{
+            display: flex;
+            margin: 24px auto 0;
+            background-color: rgb(101, 169, 206);
+            color: white;
+            border: 0;
+            border-radius: 6px;
+            padding: 16px 20px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+
+            transition: 0,3;
+
+        }
+        .purchase:hover {
+            filter: brightness(0.9);
+        }
+        /*responsividade*/
+        @media (max-width: 540px)
+        {
+            .product{
+                justify-content: center;
+            }
+            .identification{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cart-image{
+                margin-top: 6px;
+            }
+            .product-input{
+                display: block;
+                margin: 0 auto;
+            }
+            .remove{
+                display: block;
+                margin: 8px auto 0;
+            }
+
+        }
+
+        
+
+
+
+
+             
+             
+        </style>
+</head>
+<body>
+<header></header>
+
+<main>
+<section>
+<h1>Salada de frutas</h1>
+
+<div class="pud">
+    <div class="movie">
+        <strong class="product">Salada de frutas 200ml</strong>
+        <br>
+        <img class="image" src="images/Salada de Frutas.png" alt="Salada de frutas">
+        <div>
+            <span class="product-price">R$12,00</span>
+            <button class="button-hover" type="button">Adicionar ao carrinho</button>
+        </div>
+    </div>
+    <div class="movie">
+        <strong class="product">Salada de frutas Gourmet</strong>
+        <br>
+        <img class="image" src="images/GourmetSalada.png" alt="Salada de frutas Gourmet">
+        <div>
+            <span class="product-price">R$7,00</span>
+            <button class="button-hover" type="button">Adicionar ao carrinho</button>
+        </div>
+    </div>
+    <div class="movie">
+        <strong class="product">Salada ninho 300ml</strong>
+        <br>
+        <img class="image" src="images/Salada com ninho.png" alt="Com ninho">
+        <div>
+            <span class="product-price">R$12,00</span>
+            <button class="button-hover" type="button">Adicionar ao carrinho</button>
+        </div>
+    </div>
+    <div class="movie">
+        <strong class="product">Salada ninho 600ml</strong>
+        <br>
+        <img class="image" src="images/Salada 600ml.png" alt="600ml">
+        <div>
+            <span class="product-price">R$20,00</span>
+            <button class="button-hover" type="button">Adicionar ao carrinho</button>
+        </div>
+    </div 1>
+</div>
+</section>
+<section>
+    <h2>Carrinho</h2>
+
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th class="table-head first-col">Item</th>
+                <th class="table-head seconde-col">Preço</th>
+                <th class="table-head third-col">Quantidade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--<tr class="cart-production">
+                <td class="identification">
+                    <img class="cart-image" src="images/gourmetp.png" alt="Pudim 1kl">
+                    <strong class="cart-title">Pudim 1kl</strong>
+                </td>
+                <td>
+                    <span class="cart-price">R$50,00</span>
+                </td>
+                <td>
+                    <input class="product-input" type="number" value="0" min="0">
+                    <button class="remove" type="button">Remover</button>
+                </td>
+            </tr>
+            <tr class="cart-production">
+                <td class="identification">
+                    <img class="cart-image" src="images/gourmetp.png" alt="Pudim 500gr">
+                    <strong class="cart-title" >Pudim 500gr</strong>
+                </td>
+                <td>
+                    <span class="cart-price">R$20,00</span>
+                </td>
+                <td>
+                    <input class="product-input" type="number" value="0" min="0">
+                    <button class="remove" type="button">Remover</button>
+                </td>
+            </tr> -->
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3" class="cart-total">
+                    <strong>Total</strong>
+                    <span>R$0,00</span>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="purchase" type="button">Finalizar compra</button>
+</section>
+</main>
+    
+<footer class="main-footer"> 
+
+</footer>
+    
+</body>
+</html>
